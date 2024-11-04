@@ -40,6 +40,7 @@ public class AuthentificationService {
     AuthenticationManager authenticationManager;
     @Autowired
     JwtService jwtService;
+
     public void register(RegistrationRequest request) throws MessagingException {
         Role userRole = roleRepository.findByNom("client");
         User user= User.builder()
@@ -124,5 +125,8 @@ public class AuthentificationService {
     public String getRole(String auth) {
             auth=auth.replace("Bearer ", "");
         return this.userRepository.findByEmail( this.jwtService.extractUsername(auth)).getRoles().getFirst().getNom();
+    }
+    public void test(){
+        System.out.print("");
     }
 }
