@@ -126,7 +126,7 @@ public class AuthentificationService {
             auth=auth.replace("Bearer ", "");
         return this.userRepository.findByEmail( this.jwtService.extractUsername(auth)).getRoles().getFirst().getNom();
     }
-    public void test(){
+    public void test2(){
         System.out.print("");
     }
 }
