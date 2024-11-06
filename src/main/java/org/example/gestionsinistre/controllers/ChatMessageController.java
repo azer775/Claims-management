@@ -24,18 +24,10 @@ public class ChatMessageController {
     private SimpMessagingTemplate simpMessagingTemplate;
 
     // WebSocket endpoint to receive and send messages
-    /*@MessageMapping("/chat")
-    @SendTo("/topic/messages")
-    public void sendMessage( ChatMessage message) {
-        System.out.println("Handling send message: " + message);
-        // Save the message to the database before broadcasting
-        //message.getSinistre().setId(to);
-        chatMessageRepository.save(message);
-        simpMessagingTemplate.convertAndSend("/topic/messages", message);
-    }*/
+
     @MessageMapping("/chat/{sinisterId}")
     public void sendMessage(@DestinationVariable int sinisterId, ChatMessage message) {
-        System.out.println("Handling send message: " + message + " to sinister: " + sinisterId);
+
         // Save the message and associate it with the correct sinister
         Sinistre sinistre =new Sinistre();
         sinistre.setId(sinisterId);

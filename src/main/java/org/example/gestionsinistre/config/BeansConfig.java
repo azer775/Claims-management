@@ -16,7 +16,6 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 @Configuration
@@ -43,8 +42,6 @@ public class BeansConfig {
         final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         final CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        //config.setAllowedOrigins(Collections.singletonList("http://localhost:4200"));
-        //config.setAllowedOrigins(Collections.singletonList("http://localhost:8080/swagger-ui/index.html"));
         config.setAllowedOrigins(List.of("http://localhost:4200", "http://localhost:8080/swagger-ui/index.html","http://localhost:8080/**"));
 
         config.setAllowedHeaders(Arrays.asList(
