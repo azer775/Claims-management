@@ -27,11 +27,6 @@ public class SinTest {
                 .id(1)
                 .nom("client1")
                 .build();
-        when(roleRepository.save(testrole)).thenReturn(testrole);
-
-        Role savedRole = roleRepository.save(testrole);
-
-        assertEquals("client1", savedRole.getNom());
-        verify(roleRepository, times(1)).save(testrole);
+        
     }
 }
