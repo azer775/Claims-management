@@ -10,7 +10,7 @@
     </parent>
     <groupId>org.example</groupId>
     <artifactId>gestionsinistre</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>gestionsinistre</name>
     <description>gestionsinistre</description>
     <properties>
@@ -117,8 +117,8 @@
     <distributionManagement>
         <repository>
             <id>deploymentRepo</id>
-            <name>maven-releases</name>
-            <url>http://localhost:8081/repository/maven-releases/</url>
+            <name>maven-snapsho</name>
+            <url>http://192.168.50.4:8081/repository/maven-snapshots/</url>
         </repository>
     </distributionManagement>
     <build>
