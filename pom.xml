@@ -117,7 +117,7 @@
     <distributionManagement>
         <repository>
             <id>deploymentRepo</id>
-            <name>maven-snapsho</name>
+            <name>maven-snapshots</name>
             <url>http://192.168.50.4:8081/repository/maven-snapshots/</url>
         </repository>
     </distributionManagement>
