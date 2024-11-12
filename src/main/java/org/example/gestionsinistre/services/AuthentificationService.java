@@ -51,11 +51,11 @@ public class AuthentificationService {
                 .idun(request.getIdun())
                 .datenaiss(request.getDatenais())
                 .locked(false)
-                .enable(false)
+                .enable(true)
                 .roles(List.of(userRole))
                 .build();
                 userRepository.save(user);
-                sendValidationEmail(user);
+               // sendValidationEmail(user);
 
     }
     private void sendValidationEmail(User user) throws MessagingException {

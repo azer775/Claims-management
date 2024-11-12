@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  app:
+    image: "azer775/gestionsinistre:1.0.1"
+    container_name: app_container
+    ports:
+      - "8089:8089"
+    environment:
+      SPRING_APPLICATION_NAME: gestionsinistre
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/StageDB?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: ""  # Set database password here if needed
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MySQLDialect
+      SPRING_MAIL_HOST: smtp.office365.com
+      SPRING_MAIL_PORT: 587
+      SPRING_MAIL_USERNAME: azer.bennasr@  # Set email username here
+      SPRING_MAIL_PASSWORD: ""  # Set email password here
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_AUTH: "true"
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE: "true"
+      SERVER_PORT: 8089
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    container_name: mysql_container
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ""  # Set root password here
+      MYSQL_DATABASE: StageDB
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
