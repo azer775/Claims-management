@@ -29,7 +29,7 @@ services:
     ports:
       - "3306:3306"
     environment:
-      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"   # Set the root password here
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: StageDB
     volumes:
       - mysql_data:/var/lib/mysql
