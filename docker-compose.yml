@@ -28,7 +28,7 @@ services:
     container_name: mysql_container
     ports:
       - "3306:3306"
-    exposes:
+    expose:
       - "3306"
     environment:
       MYSQL_USER: root
