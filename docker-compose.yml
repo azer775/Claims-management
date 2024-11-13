@@ -11,7 +11,7 @@ services:
       SPRING_APPLICATION_NAME: gestionsinistre
       SPRING_DATASOURCE_URL: jdbc:mysql://db:3307/stagedb?createDatabaseIfNotExist=true
       SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD:    # Set database password here if needed
+      SPRING_DATASOURCE_PASSWORD: root   # Set database password here if needed
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
       SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
       SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MySQLDialect
@@ -34,7 +34,7 @@ services:
       - "3307"
     environment:
       #MYSQL_USER: root
-      MYSQL_ROOT_PASSWORD: 
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: stagedb
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
       MYSQL_ROOT_HOST: "%"
