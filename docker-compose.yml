@@ -22,6 +22,9 @@ services:
       SPRING_MAIL_PROPERTIES_MAIL_SMTP_AUTH: "true"
       SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE: "true"
       SERVER_PORT: 8089
+    build:
+      context: ./
+      dockerfile: Dockerfile
     depends_on:
       - db
   db:
