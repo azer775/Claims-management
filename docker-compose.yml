@@ -28,7 +28,7 @@ services:
       dockerfile: Dockerfile
     depends_on:
       - db
-    command: ["db:3307", "--", "java", "-jar", "your-app.jar"]
+    
   db:
     image: mysql:8.0
     container_name: mysql_container
