@@ -37,14 +37,14 @@ services:
       MYSQL_DATABASE: StageDB
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
       MYSQL_ROOT_HOST: "%"
-    volumes:
-      - mysql_data:/var/lib/mysql
+    #volumes:
+     # - mysql_data:/var/lib/mysql
     #adminer:
      # image: adminer
       #restart: always
       #port:
        # - 9000:8000
 
-volumes:
-  mysql_data:
+#volumes:
+ # mysql_data:
 
