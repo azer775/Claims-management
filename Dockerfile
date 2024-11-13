@@ -8,7 +8,7 @@ WORKDIR /app
 COPY target/gestionsinistre-1.0.1.jar app.jar
 
 # Expose the port your application runs on
-# EXPOSE 8080
+EXPOSE 8089
 
 # Run the application
 CMD ["java", "-jar", "app.jar"]
