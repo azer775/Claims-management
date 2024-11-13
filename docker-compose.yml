@@ -4,6 +4,7 @@ services:
   app:
     image: "azer775/gestionsinistre:1.0.1"
     container_name: app_container
+    network_mode: "bridge"
     ports:
       - "8089:8089"
     #restart: "always"
@@ -27,6 +28,7 @@ services:
       dockerfile: Dockerfile
     depends_on:
       - db
+    command: ["./wait-for-it.sh", "db:3306", "--", "java", "-jar", "your-app.jar"]
   db:
     image: mysql:8.0
     container_name: mysql_container
