@@ -16,7 +16,7 @@ services:
       - db
     
   db:
-    image: mysql:latest
+    image: mysql:8.0.3
     container_name: mysql_container
     command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     ports:
