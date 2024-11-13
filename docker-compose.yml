@@ -8,6 +8,10 @@ services:
     ports:
       - "8089:8089"
     #restart: "always"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db:3307/stagedb?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
     
     build:
       context: ./
