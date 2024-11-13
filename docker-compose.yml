@@ -8,8 +8,8 @@ services:
       - "8089:8089"
     #restart: "always"
     
-    depends_on:
-      - db
+    #depends_on:
+     # - db
   db:
     image: mysql:8.0
     container_name: mysql_container
