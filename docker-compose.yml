@@ -37,6 +37,11 @@ services:
       MYSQL_ALLOW_EMPTY_PASSWORD: 1
     volumes:
       - mysql_data:/var/lib/mysql
+    adminer:
+      image: adminer
+      restart: always
+      port:
+        - 9000:8000
 
 volumes:
   mysql_data:
