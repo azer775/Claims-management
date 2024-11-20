@@ -10,7 +10,7 @@ services:
     #restart: "always"
     environment:
         SPRING_APPLICATION_JSON: '{
-       "spring.datasource.url" : "jdbc:mysql://localhost:3307/stagedb?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",
+       "spring.datasource.url" : "jdbc:mysql://localhost:3306/stagedb?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",
        "spring.datasource.username" : "root",
        "spring.datasource.password" : "root",
        "spring.jpa.show-sql" : "true",
