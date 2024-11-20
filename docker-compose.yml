@@ -32,7 +32,7 @@ services:
       - "3307"
     environment:
       #MYSQL_USER: root
-      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_ROOT_PASSWORD: root
       #MYSQL_PASSWORD: "root"
       MYSQL_DATABASE: stagedb
       #MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
