@@ -15,7 +15,7 @@ services:
        "spring.datasource.password" : "root",
        "spring.jpa.show-sql" : "true",
        "spring.jpa.hibernate.ddl-auto" : "update"
-    '}
+    }'
     build:
       context: ./
       dockerfile: Dockerfile
