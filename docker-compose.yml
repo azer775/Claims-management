@@ -26,3 +26,5 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: stagedb
+    volumes:
+      - db_data:/var/lib/mysql
