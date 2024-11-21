@@ -29,7 +29,7 @@ import io.swagger.v3.oas.annotations.servers.Server;
         servers = {
                 @Server(
                         description = "Local ENV",
-                        url = "http://localhost:8090/"
+                        url = "http://192.168.50.4:8090/"
                 )
         },
         security = {
