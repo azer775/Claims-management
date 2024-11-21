@@ -15,7 +15,7 @@ import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 public class SinTest {
-   /* @Mock
+    @Mock
     private RoleRepository roleRepository;
 
     @InjectMocks
@@ -33,5 +33,5 @@ public class SinTest {
 
         assertEquals("client1", savedRole.getNom());
         verify(roleRepository, times(1)).save(testrole);
-    }*/
+    }
 }
