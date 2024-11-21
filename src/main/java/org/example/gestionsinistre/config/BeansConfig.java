@@ -42,7 +42,7 @@ public class BeansConfig {
         final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         final CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        config.setAllowedOrigins(List.of("http://localhost:4200", "http://192.168.50.4:8090/swagger-ui/index.html","http://192.168.50.4:8090/**","192.168.107.75/**"));
+       /* config.setAllowedOrigins(List.of("http://localhost:4200", "http://192.168.50.4:8090/swagger-ui/index.html","http://192.168.50.4:8090/**","192.168.107.75"));
 
         config.setAllowedHeaders(Arrays.asList(
                 HttpHeaders.ORIGIN,
@@ -56,7 +56,11 @@ public class BeansConfig {
                 "DELETE",
                 "PUT",
                 "PATCH"
-        ));
+        ));*/
+        config.addAllowedOrigin("*");
+        config.addAllowedHeader("*");
+        config.addAllowedMethod("*");
+
         source.registerCorsConfiguration("/**", config);
         return new CorsFilter(source);
 
